@@ -1,0 +1,36 @@
+# # # En la pc local (NO EN EL SERVIDOR) # # # 
+
+# Generar clave 
+~$ ssh-keygen -t rsa -b 4096
+
+# Designar clave privada
+~$ file ~/.ssh/id_rsa  # Output: /home/$username/.ssh/id_rsa: clave privada de OpenSSH
+
+# Copiar la clave en el servidor
+~$ ssh-copy-id "remoteuser"@"serverip"
+
+# Intentar acceder
+~$ ssh "remoteuser"@"serverip"
+
+# # # Almacenamiento de la frase (Passphrase) # # # 
+# Instalar keychain
+~$ sudo apt install keychain
+
+# Registrar en el .bash (bash profile)
+/usr/bin/keychain $HOME/.ssh/id_rsa
+source $HOME/.keychain/$HOSTNAME-sh
+
+# # # Para desactivar el acceso con contraseña en el servidor # # #  
+# Modificar la configuración del servidor ssh
+~$ sudo nano /etc/ssh/sshd_config
+
+# Cambios: 
+# #PasswordAuthentication yes -> PasswordAuthentication no
+# ChallengeResponseAuthentication no
+
+# Reiniciar el servidor
+~$ sudo systemctl reiniciar ssh
+
+# # # Para cambiar la frase 
+ssh-keygen -f ~/.ssh/id_rsa -p
+

@@ -1,0 +1,2 @@
+## Para enviar repositoriso
+rsync -avzhe ssh (repositorio_origen) (repositorio_destino)

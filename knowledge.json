@@ -1,0 +1,29 @@
+{
+  "SyncFiles": {
+    "Sincronización de archivos entre remotos (utilizando rsync)": {
+      "help": "./db/rsync"
+    }
+  },
+  "SSH": {
+    "AutoLogin": {
+      "url": "https://www.linuxbabe.com/linux-server/setup-passwordless-ssh-login",
+      "help": "./db/sshKey"
+    }
+  },
+  "Databases": {
+    "SQLServer": {
+      "OnLinux": {
+        "Installation guidance for SQL Server on Linux": {
+          "url": "https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup?view=sql-server-ver15",
+          "comments": "Seguir instalación guiada"
+        },
+        "Connecting Remotely to SQL Server on Linux": {
+          "url": "https://cswsolutions.com/blog/posts/2020/may/connecting-remotely-to-sql-server-on-linux/"
+        },
+        "Trying out SQL Server on Linux": {
+          "url": "https://cswsolutions.com/blog/posts/2020/may/trying-out-sql-server-on-linux/"
+        }
+      }
+    }
+  }
+}

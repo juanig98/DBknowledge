@@ -17,6 +17,8 @@
 ~$ sudo apt install keychain
 
 # Registrar en el .bash (bash profile)
+nano ~/.bashrc
+
 /usr/bin/keychain $HOME/.ssh/id_rsa
 source $HOME/.keychain/$HOSTNAME-sh
 
